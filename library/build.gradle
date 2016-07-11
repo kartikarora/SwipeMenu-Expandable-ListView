@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
+
+    def versionMajor = 1
+    def versionMinor = 0
+    def versionPatch = 0
+    def versionId = (versionMajor * 100 + versionMinor * 10 + versionPatch)
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 24
+        versionCode versionId
+        versionName "${versionMajor}.${versionMinor}.${versionPatch} - ${versionId}"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:24.0.0'
+}

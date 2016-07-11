@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.0"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
 
     def versionMajor = 1
     def versionMinor = 0
@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         minSdkVersion 8
-        targetSdkVersion 24
+        targetSdkVersion 23
         versionCode versionId
         versionName "${versionMajor}.${versionMinor}.${versionPatch} - ${versionId}"
     }
@@ -24,5 +24,5 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
 }
